@@ -6,21 +6,250 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
+   padding: 0;
+   margin: 0;
 }
 
 .container {
     font-family: 'Dm sans';
     display: grid;
-    grid-area: 
-    "";
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(5,  auto);
+    width: 60%;
+    gap: 20px;
+    grid-template-areas: 
+    "create social social schedule"
+    "create social social schedule"
+    "create manage maintain schedule"
+    "write manage maintain schedule"
+    "write faster grow grow";
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
+
 .col {
-    border: solid red 2px;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 img {
+    width: 60%;
+}
+
+.post {
     width: 50%;
 }
+
+.create {
+    grid-area: create;
+    height: 320px;
+    font-size: 30px;
+    padding-top: 50px;
+    background-color: hsl(31, 66%, 93%);
+}
+
+.create span {
+    color: hsl(256, 67%, 59%);
+}
+
+.create img {
+    width: 80%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social {
+    grid-area:  social;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(256, 67%, 59%);
+}
+
+.social b{
+    font-size: 45px;
+    text-align: center;
+}
+
+.social img {
+    width: 30%;
+    padding: 10px;
+}
+
+.social span {
+    color: hsl(39, 100%, 71%);
+}
+
+.schedule {
+    grid-area: schedule;
+    overflow: hidden;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    background-color: hsl(254, 88%, 90%);
+}
+
+.schedule span {
+   font-size: 23px;
+   font-size: bolder;
+}
+
+.schedule img {
+    box-sizing: border-box;
+    width: 18rem;
+
+}
+
+.schedule p {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 14px;
+    color: rgb(67, 65, 65);
+}
+
+.manage {
+    grid-area: manage;
+    height: 200px;
+    background-color: white;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.manage img {
+    box-sizing: border-box;
+    width:  19rem;
+    background: transparent;
+    
+}
+
+.manage h3{
+    padding: 0 60px 0 0;
+    margin: 0;
+}
+
+.maintain {
+    grid-area: maintain;
+    height: 200px;
+    width:  15rem;
+    background-color: hsl(39, 100%, 71%);
+    overflow: hidden;
+}
+
+.maintain h3 {
+    padding: 0 auto;
+    margin:  auto; 
+    padding-right: 40px;
+}
+
+.maintain img {
+    width: 13rem;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.write {
+    grid-area: write;
+    height: 312px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: hsl(39, 100%, 71%);
+}
+
+.write h2 {
+    padding: 0 50px 0 0 ;
+    margin: 0;
+}
+
+.write img {
+    width: 12rem;
+    display: flex;
+    align-items: center;
+}
+
+.faster{
+    grid-area: faster;
+    height: 200px;
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow:2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.faster b {
+    font-size: 50px;
+    padding: 0;
+    margin: 0;
+}
+
+.faster img {
+    width: 10rem;
+    padding-top: 10px;
+}
+
+.grow {
+    grid-area: grow;
+    height: 200px;
+    background-color: hsl(256, 67%, 59%);
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px;
+}
+
+.grow img {
+    padding: 20px;
+    height: 10rem;
+    width: 12rem;
+}
+
+/*
+.create {
+    grid-column: 1 ;
+    grid-row: 1 / 4;
+}
+
+.social {
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+}
+
+.schedule {
+    grid-column: 4 / 5;
+    grid-row: 1 / 5;
+}
+
+.manage {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+.maintain {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+}
+
+.write {
+    grid-column: 1 / 2;
+    grid-row: 3 / 6;
+}
+
+.faster {
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+}
+
+.grow {
+    grid-column: 3 / 5;
+    grid-row: 5;
+}
+    */
